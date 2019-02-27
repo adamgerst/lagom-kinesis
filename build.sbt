@@ -18,7 +18,7 @@ version in ThisBuild := sys.props
 
 
 val slf4j = "org.slf4j" % "log4j-over-slf4j" % "1.7.21"
-val akkaStreamKinesisConsumer = "com.streetcontxt" %% "kcl-akka-stream" % "2.0.1"
+val akkaStreamKinesisConsumer = "com.streetcontxt" %% "kcl-akka-stream" % "2.0.3"
 val scalaKinesisProducer = "com.streetcontxt" %% "kpl-scala" % "1.0.5"
 val awsJavaSdk = "com.amazonaws" % "aws-java-sdk" % "1.11.98"
 val scalaTest = "org.scalatest" %% "scalatest" % "3.0.1"
