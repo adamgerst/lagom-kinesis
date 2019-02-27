@@ -1,6 +1,6 @@
 organization in ThisBuild := "com.streetcontxt"
-scalaVersion in ThisBuild := "2.11.8"
-crossScalaVersions in ThisBuild := Seq("2.11.8", "2.12.4")
+scalaVersion in ThisBuild := "2.12.6"
+crossScalaVersions in ThisBuild := Seq("2.11.8", "2.12.6")
 licenses in ThisBuild += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html"))
 bintrayOrganization in ThisBuild := Some("streetcontxt")
 
@@ -19,7 +19,7 @@ version in ThisBuild := sys.props
 
 val slf4j = "org.slf4j" % "log4j-over-slf4j" % "1.7.21"
 val akkaStreamKinesisConsumer = "com.streetcontxt" %% "kcl-akka-stream" % "2.0.1"
-val scalaKinesisProducer = "com.streetcontxt" %% "kpl-scala" % "1.0.4"
+val scalaKinesisProducer = "com.streetcontxt" %% "kpl-scala" % "1.0.5"
 val awsJavaSdk = "com.amazonaws" % "aws-java-sdk" % "1.11.98"
 val scalaTest = "org.scalatest" %% "scalatest" % "3.0.1"
 val lagomApi = "com.lightbend.lagom" %% "lagom-api" % "1.4.4"

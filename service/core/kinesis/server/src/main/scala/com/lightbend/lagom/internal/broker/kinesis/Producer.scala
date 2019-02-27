@@ -231,6 +231,7 @@ private[lagom] object Producer {
         new KinesisProducerConfiguration()
           .setCredentialsProvider(awsCredentialsProvider)
           .setRecordMaxBufferedTime(1.millis.toMillis)
+          .setVerifyCertificate(false)
           .setRequestTimeout(10.seconds.toMillis)
       }
 
@@ -238,8 +239,12 @@ private[lagom] object Producer {
         withRegion <- applyIfDefined(kplConfig, producerConfig.regionName) {
           _.setRegion(_)
         }
-        withKinesisEndpoint <- applyIfDefined(withRegion, kinesisConfig.kinesisEndpoint) {
-          _.setKinesisEndpoint(_)
+        withKinesisEndpoint <- applyIfDefined(withRegion, kinesisConfig.kinesisEndpoint) { (config, endpoint) =>
+          endpoint.split(":") match {
+            case Array(endpoint, port) => config.setKinesisEndpoint(endpoint).setKinesisPort(port.toInt)
+            case Array(endpoint) => config.setKinesisEndpoint(endpoint)
+            case _ @a => throw new IllegalArgumentException("kinesis endpoint must have the format 'host' or 'host:port'")
+          }
         }
       } yield withKinesisEndpoint).getOrElse(kplConfig)
 
