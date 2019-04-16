@@ -22,14 +22,14 @@ val akkaStreamKinesisConsumer = "com.streetcontxt" %% "kcl-akka-stream" % "2.0.3
 val scalaKinesisProducer = "com.streetcontxt" %% "kpl-scala" % "1.0.5"
 val awsJavaSdk = "com.amazonaws" % "aws-java-sdk" % "1.11.98"
 val scalaTest = "org.scalatest" %% "scalatest" % "3.0.1"
-val lagomApi = "com.lightbend.lagom" %% "lagom-api" % "1.4.4"
-val lagomApiJavaDsl = "com.lightbend.lagom" %% "lagom-javadsl-api" % "1.4.4"
-val lagomApiScalaDsl = "com.lightbend.lagom" %% "lagom-scaladsl-api" % "1.4.4"
-val lagomPersistenceCore = "com.lightbend.lagom" %% "lagom-persistence-core" % "1.4.4"
-val lagomJavadslBroker = "com.lightbend.lagom" %% "lagom-javadsl-broker" % "1.4.4"
-val lagomJavadslServer = "com.lightbend.lagom" %% "lagom-javadsl-server" % "1.4.4"
-val lagomScaladslBroker = "com.lightbend.lagom" %% "lagom-scaladsl-broker" % "1.4.4"
-val lagomScaladslServer = "com.lightbend.lagom" %% "lagom-scaladsl-server" % "1.4.4"
+val lagomApi = "com.lightbend.lagom" %% "lagom-api" % "1.4.11"
+val lagomApiJavaDsl = "com.lightbend.lagom" %% "lagom-javadsl-api" % "1.4.11"
+val lagomApiScalaDsl = "com.lightbend.lagom" %% "lagom-scaladsl-api" % "1.4.11"
+val lagomPersistenceCore = "com.lightbend.lagom" %% "lagom-persistence-core" % "1.4.11"
+val lagomJavadslBroker = "com.lightbend.lagom" %% "lagom-javadsl-broker" % "1.4.11"
+val lagomJavadslServer = "com.lightbend.lagom" %% "lagom-javadsl-server" % "1.4.11"
+val lagomScaladslBroker = "com.lightbend.lagom" %% "lagom-scaladsl-broker" % "1.4.11"
+val lagomScaladslServer = "com.lightbend.lagom" %% "lagom-scaladsl-server" % "1.4.11"
 
 val kinesisProjects = Seq[Project](
   `kinesis-client`,
